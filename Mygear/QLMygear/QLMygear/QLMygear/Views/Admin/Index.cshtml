@@ -1,0 +1,35 @@
+﻿@model QLMygear.Models.SANPHAM
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    .dl-horizontal {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    dt {
+        display: inline;
+    }
+
+    h2 {
+        padding-top: 120px;
+        text-align: center;
+    }
+
+    p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+</style>
+<body>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <section class="section" id="product">
+        <div class="container">
+            <h2>Chi tiết sản phẩm</h2>
+            @Html.Action("SanPham", "Admin")
+            </div>
+        </section>
+    </body>

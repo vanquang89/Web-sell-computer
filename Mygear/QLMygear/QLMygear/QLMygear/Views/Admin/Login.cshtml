@@ -1,0 +1,199 @@
+﻿
+@{
+    Layout = null;
+}
+<style>
+    body {
+        background-image: url('/San_Pham/DangNhap.jpg');
+        max-width: auto;
+        background-size: cover;
+        background-position-y: -196px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .wrapper {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dangky {
+        max-width: 400px;
+        background: rgba(0,0,0,0.8);
+    }
+
+    .form-input {
+        position: relative;
+        max-width: 500px;
+    }
+
+    #box {
+        border: 0;
+        background-color: transparent;
+        border-bottom: 1px solid #fff;
+        height: 28px;
+        width: 300px;
+        color: #fff;
+        display: flex;
+        position: relative;
+        padding-left: 20px;
+        font-size: 15px;
+    }
+
+    .input {
+        border: 0;
+        background-color: transparent;
+        border-bottom: 1px solid #fff;
+        height: 28px;
+        width: 300px;
+        color: #fff;
+        display: flex;
+        position: relative;
+        padding-left: 20px;
+        transition: all 0.2s linear;
+        font-size: 15px;
+    }
+
+        .input:focus {
+            border-color: white;
+        }
+
+    .eye {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        max-width: 20px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .form-input ::placeholder {
+        color: white;
+    }
+
+
+    #content {
+        font-size: 25px;
+        color: white;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+
+
+    .table {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .submit {
+        background-color: transparent;
+        border: 1px solid #fff;
+        text-transform: uppercase;
+        padding: 6px 10px;
+        color: #fff;
+        margin-top: 30px;
+    }
+
+        .submit:hover {
+            border: 1px solid #60A2F5;
+            color: #60A2F5;
+            cursor: pointer;
+        }
+
+    td {
+        color: #fff;
+    }
+
+    .fa {
+        position: absolute;
+        float: right;
+        padding-top: 5px;
+        color: white;
+    }
+
+    .signup {
+        color: #fff;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+        .signup:hover {
+            color: #60A2F5;
+            cursor: pointer;
+        }
+
+    img {
+        height: 50px;
+        width: 85px;
+        float: left;
+        padding-top: 20px;
+    }
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h4 style="color:red; text-align:center">@ViewBag.Thongbao</h4>
+    <div class="wrapper">
+        <div class="dangky">
+            <table class="table" align="center">
+                <h3 id="content" text-align:center">ĐĂNG NHẬP</h3>
+                @using (Html.BeginForm())
+                {
+                    @Html.ValidationSummary(true);
+                    <tr style="height:40px;">
+                        <td>Tên đăng nhập:</td>
+                        <td>
+                            <input type="text" placeholder="Tên đăng nhập" @Html.TextBox("TenDN")
+                                   @ViewData["Loi1"]
+                        </td>
+                    </tr>
+                    <tr style="height:40px">
+                        <td>Mật khẩu:</td>
+                        <td>
+                            <input type="password" placeholder="Mật khẩu" @Html.Password("MatKhau")
+                                   @ViewData["Loi2"]
+                        </td>
+                    </tr>
+                    <tr style="height:40px">
+                        <td></td>
+                        <td>
+                            <input type="submit" value="Đăng nhập" />
+                        </td>
+                    </tr>
+
+                }
+            </table>
+            <h3 id="content" style="color:red; text-align:center">@ViewBag.ThongBao</h3>
+        </div>
+    </div>
+    <script>
+        const input = document.querySelector(".input");
+        const eyeOpen = document.querySelector(".eye-open");
+        const eyeClose = document.querySelector(".eye-close");
+
+        eyeOpen.addEventListener("click", function () {
+            eyeOpen.classList.add("hidden");
+            eyeClose.classList.remove("hidden");
+            input.setAttribute("type", "password");
+        });
+
+        eyeClose.addEventListener("click", function () {
+            eyeOpen.classList.remove("hidden");
+            eyeClose.classList.add("hidden");
+            input.setAttribute("type", "text");
+        });
+    </script>
+</body>
+</html>

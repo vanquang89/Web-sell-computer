@@ -1,0 +1,166 @@
+﻿@using QLMygear.Models
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/Content/Slider.css" rel="stylesheet">
+</head>
+<body>
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner" id="top">
+        <div id="frame">
+            <input type="radio" name="frame" id="frame1" checked />
+            <input type="radio" name="frame" id="frame2" />
+            <input type="radio" name="frame" id="frame3" />
+            <input type="radio" name="frame" id="frame4" />
+            <div id="slides">
+                <div id="overflow">
+                    <div class="inner">
+                        <div class="frame frame_1">
+                            <div class="frame-content">
+                                <a class="Product-tieubieu-viewall" href="https://localhost:44357/Mygear/Details/5">
+                                    <img src="~/image/slider1.png" width="100%" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="frame frame_2">
+                            <div class="frame-content">
+                                <a class="Product-tieubieu-viewall" href="https://localhost:44357/Mygear/SPtheoLSP/13">
+                                    <img src="~/image/slider2.png" width="100%" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="controls">
+                <label for="frame1"></label>
+                <label for="frame2"></label>
+            </div>
+            <div id="bullets">
+                <label for="frame1"></label>
+                <label for="frame2"></label>
+            </div>
+        </div>
+    </div>
+
+    <!-- ***** Main Banner Area End ***** -->
+    <!-- ***** New - in Start ******-->
+    <section class="section" id="products">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading" style=" background-color: red; color: white; min-width: 10%; ">
+                        <h4 class="SP">
+                            PC bán chạy
+
+                        </h4>
+                        <a class="Product-tieubieu-viewall" href="https://localhost:44357/Mygear/SPtheoLSP/1" style="float: right; padding-right: 15px; font-size: 25px; padding-top: 7px;">
+                            Xem tất cả
+                            <i class="fa fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+                @Html.Action("PC", "Mygear")
+
+                <div class="col-lg-12">
+                    <div class="section-heading" style=" background-color: red; color: white; min-width: 10%; ">
+                        <h4 class="SP">
+                            Laptop bán chạy
+                        </h4>
+                        <a class="Product-tieubieu-viewall" href="https://localhost:44357/Mygear/SPtheoLSP/12" style="float: right; padding-right: 15px; font-size: 25px; padding-top: 7px;">
+                            Xem tất cả
+                            <i class="fa fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+                @Html.Action("Laptop", "Mygear")
+
+                <div class="col-lg-12">
+                    <div class="section-heading" style=" background-color: red; color: white; min-width: 10%; ">
+                        <h4 class="SP">
+                            Màn Hình bán chạy
+                        </h4>
+                    <a class="Product-tieubieu-viewall" href="https://localhost:44357/Mygear/SPtheoLSP/13" style="float: right; padding-right: 15px; font-size: 25px; padding-top: 7px;">
+                                Xem tất cả
+                                <i class="fa fa-chevron-right"></i>
+                            </a>
+                    </div>
+                </div>
+                @Html.Action("ManHinh", "Mygear")
+
+
+                <div class="col-lg-12">
+                    <div class="section-heading" style=" background-color: red; color: white; min-width: 10%; ">
+                        <h4 class="SP">
+                            Chuột bán chạy
+
+                        </h4>
+                        <a class="Product-tieubieu-viewall" href="https://localhost:44357/Mygear/SPtheoLSP/10"  style="float: right; padding-right: 15px; font-size: 25px; padding-top: 7px;">
+                            Xem tất cả
+                            <i class="fa fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+                @Html.Action("Chuot", "Mygear")
+
+                <div class="col-lg-12">
+                    <div class="section-heading" style=" background-color: red; color: white; min-width: 10%; ">
+                            <h4 class="SP">
+                                Bàn phím bán chạy
+                            </h4>
+                            <a class="Product-tieubieu-viewall" href="https://localhost:44357/Mygear/SPtheoLSP/9"  style="float: right; padding-right: 15px; font-size: 25px; padding-top: 7px;">
+                                Xem tất cả
+                                <i class="fa fa-chevron-right"></i>
+                            </a>
+                        </div>
+                </div>
+                @Html.Action("BanPhim", "Mygear")
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="first-item">
+                        <div class="logo">
+                            <img src="~/image/logo.png" style="width: 75%; padding-top: 25px; ">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <p style="font-size: 20px; padding-top: 0px ; color: white">
+                        <br>
+                        Công ty TNHH Thương mại Mygear
+                        Email: dungpubg113@gmail.com
+                        SDT: 0394468285
+                        <br>
+                    </p>
+
+                    <p style="font-size: 20px; padding-top: 0px; color: white">
+                        <b>SHOWROOM HCM</b> (Làm việc từ 8h00 - 20h00) <br>
+                        - Địa chỉ: 475A Điện Biên Phủ, P.25, Q.Bình Thạnh, TP.HCM<br>
+                        <br>
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 style="color: white; padding-bottom: 0px; padding-top:25px"></h5>
+                    <ul>
+                        <li class="scroll-to-section"><a href="/Mygear/BaoHanh" style="font-size: 20px">Chính sách bảo hành</a></li>
+                        <li class="scroll-to-section"><a href="/Mygear/ThanhToan" style="font-size: 20px">Hướng dẫn thanh toán</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- ***** New - in End ******-->
+    <!-- ***** Explore Area Starts ***** -->
+    <!-- ***** Explore Area Ends ***** -->
+</body>
+

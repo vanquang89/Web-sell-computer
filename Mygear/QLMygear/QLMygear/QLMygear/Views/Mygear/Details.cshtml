@@ -1,0 +1,166 @@
+﻿@using QLMygear.Models;
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<style>
+    .current {
+        background-color: black;
+        color: white;
+        font-weight: 600;
+        margin-left: 10px;
+        margin-right: 10px;
+        border: 2px solid #000;
+        box-shadow: inherit;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #tab-list .item {
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <section class="section" id="product">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="left-images" style="width: 85%">
+                        <img src="~/image/@Model.Anhbia" alt="@Model.MaSP" width="150px" />
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="right-content" style="position: inherit;">
+                        <h2 style="font-size: 30px; text-align:center; margin-top: 0px;">Thông tin chung</h2>
+                        <h3 style=" margin-top: 50px;"><span style="color: black; font-size: 30px;">@Model.TenSP</span></h3>
+                        <span class="price" style="color: black">@String.Format("{0:0,0}", Model.Giaban) VNĐ</span>
+                        <ul class="stars">
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                        </ul>
+
+                        <h5 style="color: red">Mô tả sản phẩm:<span style="color: black; font-size: 20px; margin-top: 5px; margin-bottom: 20px">@Model.Mota</span> </h5>
+                        <h5 style="color: red">Bảo hành:<span style="color: black; font-size: 20px; margin-top: 5px; margin-bottom: 20px">@Model.BaoHanh</span> </h5>
+                        @if (Model.KhuyenMai1 != null)
+                        {
+                            <h5 style="color: red">Khuyến mãi 1:<span style="color: black; font-size: 20px; margin-top: 5px; margin-bottom: 20px">@Model.KhuyenMai1</span> </h5>
+                        }
+                        else
+                        {
+                        }
+                        @if (Model.KhuyenMai2 != null)
+                        {
+                            <h5 style="color: red">Khuyến mãi 2:<span style="color: black; font-size: 20px; margin-top: 5px; margin-bottom: 20px">@Model.KhuyenMai2</span> </h5>
+                        }
+                        else
+                        {
+                        }
+                        @if (Model.KhuyenMai2 != null)
+                        {
+                            <h5 style="color: red">Khuyến mãi 3:<span style="color: black; font-size: 20px; margin-top: 5px; margin-bottom: 20px">@Model.KhuyenMai2</span> </h5>
+                        }
+                        else
+                        {
+                        }
+
+                        <div class="quantity-content">
+                            <div class="left-content">
+                                <h6>Số lượng</h6>
+                            </div>
+                            <div class="right-content">
+                                <div class="quantity buttons_added">
+                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="total">
+                            <div class="main-border-button"><a href="javascript: ThemGH('@Model.MaSP', ' ')">Đặt mua</a></div>
+                        </div>
+                    </div>
+                </div>
+                @if (Model.MaLSP == 1)
+                {
+                    @Html.Action("DetailsPC", "Mygear")
+                }
+                else if (Model.MaLSP == 12)
+                {
+                    @Html.Action("DetailsLAPTOP", "Mygear")
+                }
+                else if (Model.MaLSP == 2)
+                {
+                    @Html.Action("DetailsLAPTOP", "Mygear")
+                }
+                @Html.Action("SPLienQuan", "Mygear")
+            </div>
+            
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="first-item">
+                        <div class="logo">
+                            <img src="~/image/logo.png" style="width: 75%; padding-top: 25px; ">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <p style="font-size: 20px; padding-top: 0px ; color: white">
+                        <br>
+                        Công ty TNHH Thương mại Mygear
+                        Email: dungpubg113@gmail.com
+                        SDT: 0394468285
+                        <br>
+                    </p>
+
+                    <p style="font-size: 20px; padding-top: 0px; color: white">
+                        <b>SHOWROOM HCM</b> (Làm việc từ 8h00 - 20h00) <br>
+                        - Địa chỉ: 475A Điện Biên Phủ, P.25, Q.Bình Thạnh, TP.HCM<br>
+                        <br>
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 style="color: white; padding-bottom: 0px; padding-top:25px"></h5>
+                    <ul>
+                        <li class="scroll-to-section"><a href="/Mygear/BaoHanh" style="font-size: 20px">Chính sách bảo hành</a></li>
+                        <li class="scroll-to-section"><a href="/Mygear/ThanhToan" style="font-size: 20px">Hướng dẫn thanh toán</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    var size = 39;
+    function changeSize(Size) {
+        size = Size;
+    }
+    let x = document.getElementsByClassName("submit");
+    for (let i = 0; i < x.length; i++) {
+        x[i].onclick = function () {
+            if (this.style.color !== "white") {
+                this.style.backgroundColor = "black";
+                this.style.color = "white";
+            }
+            else {
+                this.style.backgroundColor = "white";
+                this.style.color = "black";
+            }
+        };
+    }
+    function ThemGH(MaSP, strURL) {
+        location.href = "../../../GioHang/ThemGioHang?MaSP=" + MaSP + "&Size=" + size + "&strURL=" + strURL;
+    }
+    const otems = document.getElementsByClassName('item')
+
+</script>
+

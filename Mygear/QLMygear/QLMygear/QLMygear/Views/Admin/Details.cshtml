@@ -1,0 +1,132 @@
+﻿@model QLMygear.Models.SANPHAM
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    .dl-horizontal {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    dt {
+        display: inline;
+    }
+
+    h2 {
+        padding-top: 120px;
+        text-align: center;
+    }
+
+    p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+</style>
+<body>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <section class="section" id="product">
+        <div class="container">
+            <h2>Chi tiết sản phẩm</h2>
+
+            <div>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        Tên sản phẩm:
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => Model.TenSP)
+                    </dd>
+                    <dt>
+                        Giá bán:
+                    </dt>
+                    <dd>
+                        @String.Format("{0:0,0}", Model.Giaban) VNĐ
+                    </dd>
+                    <dt>
+                        Mô tả:
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Mota)
+                    </dd>
+                    <dt>
+                        Ảnh sản phẩm:
+                    </dt>
+                    <dd>
+                        <img src="@Url.Content("~/image/" + Model.Anhbia)" width="250px" />
+                    </dd>
+                    <dt>
+                        Mã loại:
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.MaLSP)
+                    </dd>
+                </dl>
+            </div>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.MaSP }) |
+                @Html.ActionLink("Back to List", "SanPham")
+            </p>
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="first-item">
+                                <div class="logo">
+                                    <img src="~/image/logo.png" alt="hexashop ecommerce templatemo" width="195" height="59px">
+                                </div>
+                                <p style="font-size: 14px; padding-top: 4px ; color: white">
+                                    <br>
+                                    Công ty TNHH Thương mại Mygear
+                                    Email: dungpubg113@gmail.com
+                                    SDT: 0394468285
+                                    <br>
+                                </p>
+
+                                <p style="font-size: 14px; padding-top: 4px; color: white">
+                                    <b>SHOWROOM HCM</b> (Làm việc từ 8h00 - 20h00) <br>
+                                    - Địa chỉ: 475A Điện Biên Phủ, P.25, Q.Bình Thạnh, TP.HCM<br>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <h5>Hỗ trợ và thông tin</h5>
+                            <ul>
+                                <li><a href="#">Chính sách bảo hành</a></li>
+                                <li><a href="#">Nike</a></li>
+                                <li><a href="#">Adidas</a></li>
+                                <li><a href="#">Puma</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <h4>Hỗ trợ &amp; Thông tin</h4>
+                            <ul>
+                                <li><a href="#">Help</a></li>
+                                <li><a href="#">FAQ's</a></li>
+                                <li><a href="#">Shipping</a></li>
+                                <li><a href="#">Tracking ID</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="under-footer">
+                                <p>
+                                    Copyright © 2022 HPT Team Co., Ltd. All Rights Reserved.
+                                </p>
+                                <br /><p>Design by: HPT TEAM</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/profile.php?id=100010513748418"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://www.instagram.com/_huynhh_/"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+</body>

@@ -1,0 +1,121 @@
+﻿
+
+@using QLMygear.Models;
+@{
+    ViewBag.Title = "DetailsLAPTOP";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<body>
+    <div class="content">
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="chitiet" style="width: 1200px">
+                <h2 class="product_name">
+                    <strong>Thông số kỹ thuật: @Model.TenSP</strong>
+                </h2>
+                <div class="scroll-table">
+                    <table border="1" cellspacing="0" style="background-color:#ffffff; border-collapse:collapse; border-spacing:0px; border:1px solid #eeeeee; box-sizing:border-box; color:#333333; font-family:Roboto,sans-serif; font-size:13px; line-height:20px; margin-bottom:20px; margin-left:auto; margin-right:auto; max-width:100%; min-width:500px; width:100%" class="mce-item-table table table-bordered">
+                        <tbody style="box-sizing: border-box;">
+                            <tr style="box-sizing:border-box" class="row-info">
+                                <td style="background-color:#f7f7f7 !important; border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:22.1614%">
+                                    <span style="font-size:16px">
+                                        CPU
+                                    </span>
+                                </td>
+                                <td style="border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:535px">
+                                    <span style="font-size:16px">@Model.TT1</span>
+                                </td>
+
+                            </tr>
+                            <tr style="box-sizing:border-box" class="row-info">
+                                <td style="background-color:#f7f7f7 !important; border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:22.1614%">
+                                    <span style="font-size:16px">
+                                        RAM
+                                    </span>
+                                </td>
+                                <td style="border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:535px">
+                                    <span style="font-size:16px">@Model.TT2</span>
+                                </td>
+
+                            </tr>
+                            <tr style="box-sizing:border-box" class="row-info">
+                                <td style="background-color:#f7f7f7 !important; border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:22.1614%">
+                                    <span style="font-size:16px">
+                                        Ổ cứng
+                                    </span>
+                                </td>
+                                <td style="border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:535px">
+                                    <span style="font-size:16px">@Model.TT3</span>
+                                </td>
+
+                            </tr>
+                            <tr style="box-sizing:border-box" class="row-info">
+                                <td style="background-color:#f7f7f7 !important; border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:22.1614%">
+                                    <span style="font-size:16px">Webcam</span>
+                                </td>
+                                <td style="border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:535px">
+                                    <span style="font-size:16px">@Model.TT4</span>
+                                </td>
+
+                            </tr>
+                            <tr style="box-sizing:border-box" class="row-info">
+                                <td style="background-color:#f7f7f7 !important; border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:22.1614%">
+                                    <span style="font-size:16px">Hệ điều hành</span>
+                                </td>
+                                <td style="border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:535px">
+                                    <span style="font-size:16px">@Model.TT5</span>
+                                </td>
+
+                            </tr>
+                            <tr style="box-sizing:border-box" class="row-info">
+                                <td style="background-color:#f7f7f7 !important; border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:22.1614%">
+                                    <span style="font-size:16px">PIN</span>
+                                </td>
+                                <td style="border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:535px">
+                                    <span style="font-size:16px">@Model.TT6</span>
+                                </td>
+
+                            </tr>
+                            <tr style="box-sizing:border-box" class="row-info">
+                                <td style="background-color:#f7f7f7 !important; border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:22.1614%">
+                                    <span style="font-size:16px">Trọng lượng</span>
+                                </td>
+                                <td style="border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:535px">
+                                    <span style="font-size:16px">@Model.TT7</span>
+                                </td>
+
+                            </tr>
+                            <tr style="box-sizing:border-box" class="row-info">
+                                <td style="background-color:#f7f7f7 !important; border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:22.1614%">
+                                    <span style="font-size:16px">Màu</span>
+                                </td>
+                                <td style="border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:535px">
+                                    <span style="font-size:16px">@Model.TT8</span>
+                                </td>
+
+                            </tr>
+                            <tr style="box-sizing:border-box" class="row-info">
+                                <td style="background-color:#f7f7f7 !important; border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:22.1614%">
+                                    <span style="font-size:16px">Kích thước</span>
+                                </td>
+                                <td style="border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:535px">
+                                    <span style="font-size:16px">@Model.TT9</span>
+                                </td>
+
+                            </tr>
+                            <tr style="box-sizing:border-box" class="row-info">
+                                <td style="background-color:#f7f7f7 !important; border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:22.1614%">
+                                    <span style="font-size:16px">Card đồ họa</span>
+                                </td>
+                                <td style="border-color:#eeeeee; border-style:solid; border-width:1px; box-sizing:border-box; padding:8px; vertical-align:top; width:535px">
+                                    <span style="font-size:16px">@Model.TT10</span>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

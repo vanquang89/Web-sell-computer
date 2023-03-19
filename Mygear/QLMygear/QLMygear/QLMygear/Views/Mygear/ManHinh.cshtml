@@ -1,0 +1,39 @@
+﻿
+@using QLMygear.Models;
+@model List<SANPHAM>
+
+@foreach (var item in Model)
+{
+    <div class="col-lg-4">
+        <div class="item">
+            <div class="thumb">
+                <div class="hover-content">
+                    <ul>
+                        <li><a href="@Url.Action("Details", "Mygear", new { id = item.MaSP})"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="@Url.Action("Details", "Mygear", new { id = item.MaSP})"><i class="fa fa-star"></i></a></li>
+                        <li><a href="@Url.Action("Details", "Mygear", new { id = item.MaSP})"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+                <a href="@Url.Action("Details", "Mygear", new { id = item.MaSP})">
+                    <img src="~/image/@item.Anhbia" alt="@item.TenSP">
+                </a>
+
+            </div>
+            <div class="down-content">
+                <h3 style="margin-top:5px; font-size: 20px;">@item.TenSP</h3>
+                <span>@String.Format("{0:0,0}", item.Giaban) VNĐ</span>
+                <ul class="stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+}
+
+

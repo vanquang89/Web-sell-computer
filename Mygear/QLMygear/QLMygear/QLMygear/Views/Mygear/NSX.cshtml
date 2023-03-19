@@ -1,0 +1,12 @@
+﻿@model IEnumerable<QLMygear.Models.LOAISP>
+<ul>
+    <li>
+        @foreach (var nh in Model)
+        {
+            <a href="@Url.Action("SPtheoLSP", "Mygear", new { id = nh.MaLSP})">
+                @nh.TenLSP
+            </a>
+        }
+    </li>
+</ul>
+

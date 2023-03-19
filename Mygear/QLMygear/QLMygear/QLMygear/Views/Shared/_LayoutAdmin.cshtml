@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="~/css/font-awesome.css">
+
+    <link rel="stylesheet" href="~/css/templatemo-hexashop.css">
+
+    <link rel="stylesheet" href="~/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="~/css/lightbox.css">
+    <script src="~/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: 'textarea' });</script>
+</head>
+<body>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <li class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="/Mygear/Index" class="logo">
+                            <img src="~/image/logo.png" width="180px" height="50px" />
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li>@Html.ActionLink("Trang chủ", "Index", "Admin")</li>
+                            <li>@Html.ActionLink("Quản lý loại sản phẩm", "LoaiSP", "Admin")</li>
+                            <li>@Html.ActionLink("Quản lý sản phẩm", "SanPham", "Admin")</li>
+
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+            </div>
+        </div>
+        </div>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+
+    <!-- ***** Footer Start ***** -->
+
+
+    <!-- jQuery -->
+    <script src="~/Scripts/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="~/Scripts/popper.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="~/Scripts/owl-carousel.js"></script>
+    <script src="~/Scripts/accordions.js"></script>
+    <script src="~/Scripts/datepicker.js"></script>
+    <script src="~/Scripts/scrollreveal.min.js"></script>
+    <script src="~/Scripts/waypoints.min.js"></script>
+    <script src="~/Scripts/jquery.counterup.min.js"></script>
+    <script src="~/Scripts/imgfix.min.js"></script>
+    <script src="~/Scripts/slick.js"></script>
+    <script src="~/Scripts/lightbox.js"></script>
+    <script src="~/Scripts/isotope.js"></script>
+
+    <!-- Global Init -->
+    <script src="~/Scripts/custom.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".fa-search").click(function () {
+                $(".searchbox, .input").toggleClass("active");
+                $("input[type='text']").focus();
+            });
+        });
+        $(function () {
+            var selectedClass = "";
+            $("p").click(function () {
+                selectedClass = $(this).attr("data-rel");
+                $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("." + selectedClass).fadeOut();
+                setTimeout(function () {
+                    $("." + selectedClass).fadeIn();
+                    $("#portfolio").fadeTo(50, 1);
+                }, 500);
+            });
+        });
+
+    </script>
+</body>
+</html>
